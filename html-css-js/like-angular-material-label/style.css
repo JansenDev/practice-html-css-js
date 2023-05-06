@@ -1,0 +1,67 @@
+:root {
+  --color-primary: #8f44fd;
+  --color-secondary: #888888;
+  --color-white: #f9f9f9;
+  --color-dark: #151515;
+}
+
+body {
+  background: var(--color-dark);
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.md-textbox {
+  position: relative;
+}
+
+.md-textbox :is(label, span) {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  pointer-events: none;
+  color: var(--color-secondary);
+  transition: 0.3s;
+}
+
+.md-textbox > label {
+  left: 10px;
+  padding: 4px 8px;
+}
+
+.md-textbox > span {
+  right: 16px;
+  font-size: 28px;
+}
+
+.md-textbox > input {
+  height: 56px;
+  width: 220px;
+  padding-left: 16px;
+  border: 2px solid var(--color-secondary);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-white);
+}
+
+.md-textbox > :is(input:focus, .has-value) {
+  border-color: var(--color-primary);
+  outline: var(--color-primary);
+}
+
+.md-textbox > :is(input:focus, .has-value) ~ span {
+  color: var(--color-white);
+}
+
+.md-textbox > :is(input:focus, .has-value) ~ label {
+  background: var(--color-dark);
+  color: rgb(255 255 255 / 85%);
+  translate: 0 -46px;
+  font-size: 12px;
+}
