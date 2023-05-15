@@ -1,0 +1,11 @@
+.resizable {
+  resize: both;
+  overflow: hidden;
+  /* width: 300px; */
+  /* height: 200px; */
+  background-color: #ff9950;
+  /* color: #118c32; */
+  /* display: grid; */
+  /* place-items: center; */
+  /* font-size: 24px; */
+}
